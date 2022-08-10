@@ -2226,16 +2226,16 @@ Silahkan Klick Button Dibawah Untuk Melihat Beberapa Fitur Yang Tersedia`
   case 'scariel':{
  {
                 let sections = [ { title: `${m.pushName} ${m.sayingtime + m.timoji}`, rows: [ { title: "💰 50K No Enc", rowId: "#ariel50K", description: "Full Fitur No Enc On 24 Jam"},{title: "💰 30K No Enc", rowId: "#ariel30K", description: "45 Fitur Di Hapus & No Enc On 24 Jam"}, ]}    ]
-                let listMessage = {footer: `${Options.info.botName}`,text: `Beli Script Bot Ke Owner wa.me/12087630151`, buttonText: "List Harga",sections}
+                let listMessage = {footer: `${Options.info.botName}`,text: `Beli Script Bot Ke Owner wa.me/6282118022072`, buttonText: "List Harga",sections}
                 let sendm =  sock.sendMessage( from, listMessage, {quoted :m })
                 }
             }
             break
   case 'ariel50k':
-  reply('Full Fitur No Enc On 24 Jam Chat Owner wa.me/12087630151 Harga 50K\n\n• Payment\nGopay\nDana\nOvo\nPulsa')
+  reply('Full Fitur No Enc On 24 Jam Chat Owner wa.me/6282118022072 Harga 50K\n\n• Payment\nGopay\nDana\nOvo\nPulsa')
   break
   case 'ariel30k':
-  reply('45 Fitur Di Hapus & No Enc On 24 Jam Chat Owner wa.me/12087630151 Harga 30K\n\n• Payment\nGopay\nDana\nOvo\nPulsa')
+  reply('45 Fitur Di Hapus & No Enc On 24 Jam Chat Owner wa.me/6282118022072 Harga 30K\n\n• Payment\nGopay\nDana\nOvo\nPulsa')
   break
   case 'asumenu':{
  {
