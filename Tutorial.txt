@@ -1,0 +1,13 @@
+Ubah Foto Bot Silahkan Ke Folder Di Bawah Ini
+
+Folder Bot > storage > image > ArielGantengBangetWowOmaygatEpribadihTeetewtwtetwArielSPnihbostengtengteng.jpg
+
+Kalian Hapus Terlebih Dahulu Foto Itu
+
+Dan Kalian Harus Ubah Nama Foto Mu
+Menjadi ArielGantengBangetWowOmaygatEpribadihTeetewtwtetwArielSPnihbostengtengteng.jpg
+
+Ubah Nomor Bot?
+Folder Bot > FunctionMD > settings > options.js
+
+Terimakasih 
