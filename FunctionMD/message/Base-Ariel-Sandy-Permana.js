@@ -143,7 +143,7 @@ module.exports = async (
    const quoted = m.quoted ? m.quoted : m
    const mime = (quoted.m || quoted).mimetype || ''
    const chatmessage = (m.xtype === 'conversation') ? m.message.conversation : (m.xtype === 'extendedTextMessage') ? m.message.extendedTextMessage.text : ''
-   const ordermessage = (m.xtype === 'conversation') ? m.message.conversation : (m.xtype == 'imageMessage') ? m.message.imageMessage.caption : (m.xtype == 'videoMessage') ? m.message.videoMessage.caption : (m.xtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.xtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.xtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.xtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.xtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
+   const ordermessage = (m.xtype === 'conversation' && m.message.conversation) ? m.message.conversation : (m.xtype == 'imageMessage') ? m.message.imageMessage.caption : (m.xtype == 'videoMessage') ? m.message.videoMessage.caption : (m.xtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.xtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.xtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.xtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.xtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
    const chats = (m.xtype === 'conversation' && m.message.conversation) ? m.message.conversation : (m.xtype == 'imageMessage') && m.message.imageMessage.caption ? m.message.imageMessage.caption : (m.xtype == 'documentMessage') && m.message.documentMessage.caption ? m.message.documentMessage.caption : (m.xtype == 'videoMessage') && m.message.videoMessage.caption ? m.message.videoMessage.caption : (m.xtype == 'extendedTextMessage') && m.message.extendedTextMessage.text ? m.message.extendedTextMessage.text : (m.xtype == 'buttonsResponseMessage' && m.message.buttonsResponseMessage.selectedButtonId) ? m.message.buttonsResponseMessage.selectedButtonId : (m.xtype == 'templateButtonReplyMessage') && m.message.templateButtonReplyMessage.selectedId ? m.message.templateButtonReplyMessage.selectedId : ''
    const args = ordermessage.trim().split(/ +/).slice(1)
    const botNumber = sock.user.id.split(':')[0] + '@s.whatsapp.net'
@@ -2224,17 +2224,17 @@ Silahkan Klick Button Dibawah Untuk Melihat Beberapa Fitur Yang Tersedia`
             break
   case 'scariel':{
  {
-                let sections = [ { title: `${m.pushName} ${m.sayingtime + m.timoji}`, rows: [ { title: "💰 50K No Enc", rowId: "#ariel50K", description: "Full Fitur No Enc On 24 Jam"},{title: "💰 30K No Enc", rowId: "#ariel30K", description: "45 Fitur Di Hapus & No Enc On 24 Jam"}, ]}    ]
+                let sections = [ { title: `${m.pushName} ${m.sayingtime + m.timoji}`, rows: [ { title: "💰 40K No Enc", rowId: "#ariel50K", description: "Full Fitur No Enc On 24 Jam"},{title: "💰 25K No Enc", rowId: "#ariel30K", description: "45 Fitur Di Hapus & No Enc On 24 Jam"}, ]}    ]
                 let listMessage = {footer: `${Options.info.botName}`,text: `Beli Script Bot Ke Owner wa.me/12085012036`, buttonText: "List Harga",sections}
                 let sendm =  sock.sendMessage( from, listMessage, {quoted :m })
                 }
             }
             break
   case 'ariel50k':
-  reply('Full Fitur No Enc On 24 Jam Chat Owner wa.me/12085012036 Harga 50K\n\n• Payment\nGopay\nDana\nOvo\nPulsa')
+  reply('Full Fitur No Enc On 24 Jam Chat Owner wa.me/12085012036 Harga 40K\n\n• Payment\nGopay\nDana\nOvo\nPulsa')
   break
   case 'ariel30k':
-  reply('45 Fitur Di Hapus & No Enc On 24 Jam Chat Owner wa.me/12085012036 Harga 30K\n\n• Payment\nGopay\nDana\nOvo\nPulsa')
+  reply('45 Fitur Di Hapus & No Enc On 24 Jam Chat Owner wa.me/12085012036 Harga 25K\n\n• Payment\nGopay\nDana\nOvo\nPulsa')
   break
   case 'asumenu':{
  {
