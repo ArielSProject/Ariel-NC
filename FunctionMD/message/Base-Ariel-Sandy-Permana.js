@@ -212,7 +212,7 @@ const convertAriel = `✘ *C O N V E R T - M E N U*\n\n⌕ ${prefix}toimg\n⌕ $
 const textAriel = `✘ *T E X T P R O - M E N U*\n\n⌕ ${prefix}arielpetir <text>\n⌕ ${prefix}arielpetir2 <text>\n⌕ ${prefix}pottery <text>\n⌕ ${prefix}bussines3d <text>\n⌕ ${prefix}stoneariel3d <text>\n⌕ ${prefix}neon3dariel <text>\n⌕ ${prefix}neon <text>\n⌕ ${prefix}impresiveariel <text>\n⌕ ${prefix}neondevil3dariel <text>\n⌕ ${prefix}underwater3d <text>\n⌕ ${prefix}bears3dariel <text>\n⌕ ${prefix}fireworkbucin <text>\n⌕ ${prefix}metaldarkariel <text>\n⌕ ${prefix}halloweenariel <text>\n⌕ ${prefix}captainamerikabyariel <text>\n⌕ ${prefix}spacetext <text>\n⌕ ${prefix}plastic3d <text>\n⌕ ${prefix}dropwater3d <text>\n⌕ ${prefix}avengerslogo3d <text>\n⌕ ${prefix}brokenglass <text>\n⌕ ${prefix}wonderfulgravity3d <text>\n⌕ ${prefix}futuristicneon3d <text>\n⌕ ${prefix}skytext3d <text>\n⌕ ${prefix}robotr2 <text>\n⌕ ${prefix}breakwall <text>\n⌕ ${prefix}matrixstyle <text>\n⌕ ${prefix}waterpiperariel <text>\n⌕ ${prefix}blackpink <text>\n⌕ ${prefix}lightglow <text>\n⌕ ${prefix}glass <text>\n⌕ ${prefix}hoorror_blood <text>\n⌕ ${prefix}sand <text>\n⌕ ${prefix}sketch <text>\n⌕ ${prefix}magma <text>\n⌕ ${prefix}batman <text>\n⌕ ${prefix}demon <text>\n⌕ ${prefix}sci_fi <text>\n⌕ ${prefix}sea_metal <text>\n⌕ ${prefix}skeleton <text>\n⌕ ${prefix}transformer <text>\n⌕ ${prefix}warning <text>\n⌕ ${prefix}denim <text>`
 const googleAriel = `✘ *G O O G L E - M E N U*\n\n⌕ ${prefix}detiknews\n⌕ ${prefix}wiki\n⌕ ${prefix}gempa\n⌕ ${prefix}lirik\n⌕ ${prefix}jadwaltv\n⌕ ${prefix}covidindo\n⌕ ${prefix}pinterest`
 const randomAriel = `✘ *R A N D O M - M E N U*\n\n⌕ ${prefix}patrik\n⌕ ${prefix}penyegar\n⌕ ${prefix}moodbooster\n⌕ ${prefix}waifu\n⌕ ${prefix}simi\n⌕ ${prefix}awoo\n⌕ ${prefix}shinobu\n⌕ ${prefix}couple\n⌕ ${prefix}aesthetic\n⌕ ${prefix}artinama\n⌕ ${prefix}storywa\n⌕ ${prefix}asupan`
-const funAriel = `✘ *F U N - M E N U*\n\n⌕ ${prefix}apakah\n⌕ ${prefix}bisakah\n⌕ ${prefix}bagaimanakah\n⌕ ${prefix}cekganteng\n⌕ ${prefix}cekcantik\n⌕ ${prefix}ceksange\n⌕ ${prefix}cekgay\n⌕ ${prefix}ceklesbi\n⌕ ${prefix}kapankah\n⌕ ${prefix}jadian\n⌕ ${prefix}cekmati\n⌕ ${prefix}meme\n⌕ ${prefix}quotes\n⌕ ${prefix}gombalan`
+const funAriel = `✘ *F U N - M E N U*\n\n⌕ ${prefix}apakah\n\n⌕ ${prefix}rate\n⌕ ${prefix}bisakah\n⌕ ${prefix}bagaimanakah\n⌕ ${prefix}cekganteng\n⌕ ${prefix}cekcantik\n⌕ ${prefix}ceksange\n⌕ ${prefix}cekgay\n⌕ ${prefix}ceklesbi\n⌕ ${prefix}kapankah\n⌕ ${prefix}jadian\n⌕ ${prefix}cekmati\n⌕ ${prefix}meme\n⌕ ${prefix}quotes\n⌕ ${prefix}gombalan`
 const animeAriel = `✘ *A N I M E - M E N U*\n\n⌕ ${prefix}manga\n⌕ ${prefix}otakudesu\n⌕ ${prefix}neko\n⌕ ${prefix}waifu\n⌕ ${prefix}megumin\n⌕ ${prefix}anime\n⌕ ${prefix}husbu\n⌕ ${prefix}neko2`
 const toolsAriel = `✘ *T O O L S - M E N U*\n\n⌕ ${prefix}tinyurl\n⌕ ${prefix}cuttly\n⌕ ${prefix}ceklokasi`
 const mtkAriel = `✘ *M T K - M E N U*\n\n⌕ ${prefix}luas-segitiga\n⌕ ${prefix}kel-segitiga\n⌕ ${prefix}luas-persegi\n⌕ ${prefix}kel-persegi\n⌕ ${prefix}kuadrat\n⌕ ${prefix}kubik`
@@ -327,6 +327,7 @@ const MenuList = `✘ *I N F O - B O T*
 ✘ *F U N - M E N U*
 
 ⌕ ${prefix}apakah
+⌕ ${prefix}rate
 ⌕ ${prefix}bisakah
 ⌕ ${prefix}bagaimanakah
 ⌕ ${prefix}cekganteng
@@ -3997,23 +3998,18 @@ if (q.includes('--help')) return reply(examlink)
   break
   
   
-  case 'p':
-   sock.sendMessage(
-     from, 
-     { 
-      sticker: { 
-       url: "https://f.top4top.io/p_2252t7a7n1.jpg" 
-       } 
-      }, 
-     { quoted: m }
-    )
-  break 
   
 case 'apakah':
 if (args.length < 1) return m.reply(from, `Contoh : ${prefix+order} Saya Gay?`, { quoted : m } )
 const apa = ['Iya', 'Tidak', 'Bisa Jadi', 'Betul','Mungkin Iya','YNTKTS']
 const kah = apa[Math.floor(Math.random() * apa.length)]
 sock.sendMessage(from, { text: `Pertanyaan : Apakah ${q}\nJawaban : ${kah}` }, { quoted: m })
+break
+case 'rate':
+if (args.length < 1) return m.reply(from, `Contoh : ${prefix+order} Ariel SP`, { quoted : m } )
+const ra = ['0/10', '0,4/10', '1/10', '1,2/10','1,5/10','2/10','2,1/10','3/10','3,3/10','4/10','4,8/10','5/10','5,3/10','6/10','6,4/10','7/10','7,2/10','8/10','8,5/10','9/10','9,1/10','10/10']
+const te = ra[Math.floor(Math.random() * ra.length)]
+sock.sendMessage(from, { text: `「 *${q}* 」\n\n*Rate* : ${te}` }, { quoted: m })
 break
 case 'bisakah':
 if (args.length < 1) return m.reply(from, `Contoh : ${prefix+order} Saya Berhenti Coli?`, { quoted : m } )
